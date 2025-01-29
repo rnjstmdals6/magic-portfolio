@@ -14,7 +14,7 @@ type TimeDisplayProps = {
   locale?: string; // Optionally allow locale, defaulting to 'en-GB'
 };
 
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
+const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "ko-KR" }) => {
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
@@ -71,24 +71,24 @@ export const Header = () => {
             horizontal="center"
           >
             <Flex gap="4" vertical="center" textVariant="body-default-s">
+              {/*{routes["/"] && (*/}
+              {/*  <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />*/}
+              {/*)}*/}
+              {/*<Line vert maxHeight="24" />*/}
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
-              )}
-              <Line vert maxHeight="24" />
-              {routes["/about"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="person"
-                    href="/about"
+                    href="/"
                     label={about.label}
-                    selected={pathname === "/about"}
+                    selected={pathname === "/"}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="person"
-                    href="/about"
-                    selected={pathname === "/about"}
+                    href="/"
+                    selected={pathname === "/"}
                   />
                 </>
               )}

@@ -45,11 +45,16 @@ export default function Post({ post, thumbnail }: PostProps) {
             {post.metadata.title}
           </Heading>
           <Text variant="label-default-s" onBackground="neutral-weak">
-            {formatDate(post.metadata.publishedAt, false)}
+            {post.metadata.publishedAt}
           </Text>
-          {post.metadata.tag && (
-            <Tag className="mt-8" label={post.metadata.tag} variant="neutral" />
+          {post.metadata.tag && Array.isArray(post.metadata.tag) && post.metadata.tag.length > 0 && (
+              <Flex className="g-4">
+                {post.metadata.tag.map((tag, index) => (
+                    <Tag key={index} label={tag} variant="neutral" />
+                ))}
+              </Flex>
           )}
+
         </Column>
       </Flex>
     </SmartLink>

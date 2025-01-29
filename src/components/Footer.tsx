@@ -28,9 +28,9 @@ export const Footer = () => {
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-            / Build your portfolio with{" "}
+            / Magic Portfolio. Licensed under CC BY-NC 4.0. /
             <SmartLink
-              style={{ marginLeft: "-0.125rem" }}
+              style={{ marginLeft: "-0.125rem", color: "#959595" }}
               href="https://once-ui.com/templates/magic-portfolio"
             >
               Once UI
