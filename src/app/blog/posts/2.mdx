@@ -1,31 +1,72 @@
 ---
-title: "토티 - 멘토링 웹 서비스"
-publishedAt: "2022.05 - 2023.1"
-image: "/images/gallery/totee.png"
-summary: "As design engineers, we're often defined by the 1% of our work that makes it into the final product."
-tag: ["AWS", "Docker", "OAuth", "QueryDSL", "Github Actions"]
+title: "단골 손님"
+publishedAt: "2023.2 - 2023.11"
+image: "/images/projects/project-01/dangol.png"
+summary: "In recent years, the role of design engineering has evolved from a specialized niche to a critical component in the development of innovative products and solutions."
+tag: ["RestDoc", "HateOas", "상속 매핑", "비동기"]
 ---
 
-As design engineers, we're often defined by the 1% of our work that makes it into the final product. That shiny, polished piece of engineering is a result of countless iterations, tweaks, and redesigns. But what happens to the other 99%—those ideas, concepts, and prototypes that never see the light of day? They remain tucked away in the drawer, both literally and figuratively.
+# 단골손님 - 소상공인 구독 서비스 플랫폼
 
-## The Beauty of Unused Ideas
+## 프로젝트 목적
 
-It’s easy to think of discarded designs as failures, but in truth, they’re stepping stones. Each one represents a path explored, tested, and ultimately left behind. Those early drafts may never become reality, but they play a crucial role in shaping the solution that does. They teach us what works and, more importantly, what doesn’t.
+대기업 프랜차이즈에서는 이미 정기 구독 서비스를 통해 단골 고객을 유치하고 있습니다. 하지만 동네의 작은 식당이나 카페는 이러한 시스템을 도입하기 어려운 경우가 많습니다. **단골손님은 소상공인을 위한 맞춤형 구독 서비스 중개 플랫폼으로, 손님에게는 저렴한 가격으로 지속적인 서비스를 받을 기회를, 소상공인에게는 안정적인 매출을 제공하는 것이 목표입니다.**
 
-## The Process of Elimination
+## 핵심 목표
 
-In every project, the first few ideas often come quickly. They’re intuitive, straightforward, and sometimes too simple. As we dive deeper, we explore more creative solutions, test the limits of materials and technology, and challenge the initial assumptions. This process of elimination is not about rejecting ideas but about refining them. The 99% left in the drawer is evidence of rigorous thinking and thorough exploration.
+- **소상공인용 구독권 관리 기능**
+- **손님용 정기/횟수 차감 구독권 결제 기능**
+- **QR 코드를 통한 구독권 조회 기능**
 
-## Why the Drawer Matters
+## 프로젝트 개요
 
-For every concept that didn’t make it, there’s a lesson learned. A sketch that looked promising might fail in prototyping. A concept that seemed impractical might be revisited years later, finding new relevance with advancements in technology or a change in project scope. These shelved ideas serve as a knowledge base—a library of possibilities for future projects.
+- **프로젝트명**: 단골손님
+- **설명**: 소상공인을 위한 구독 서비스 중개 플랫폼
+- **배포 링크**: 운영 중단
+- **깃허브**: [프로젝트 GitHub 링크](https://github.com/jaemisam-a/dangol-sonnim-backend)
+- **작업 인원**: 백엔드 1명(본인) / 프론트엔드 2명 / 디자이너 2명
 
-## Innovation Through Failure
+## 주요 기능
 
-Many breakthrough innovations are born from revisiting old, seemingly failed concepts. What didn’t work in one context might be the key to solving a problem in another. As design engineers, we should never be afraid to open the drawer and revisit those shelved ideas. They are a testament to the iterative nature of design, where nothing is truly wasted.
+### 1. 사장님 전용 가게 및 구독권 관리 기능
+- 가게를 등록하고 직접 구독권을 생성 및 관리할 수 있음
+- 구독권별 사용 가능 횟수 및 유효 기간 설정 가능
+- 구독권 판매 현황을 실시간으로 확인할 수 있음
 
-![Once UI logo on dark background.](/images/projects/project-01/cover-01.jpg)
+### 2. 손님 전용 구독권 결제 기능
+- 정기 구독과 횟수 차감형 구독권 두 가지 유형 제공
+- 신용카드 및 카카오페이와 같은 결제 수단 지원
+- 마이페이지에서 현재 활성화된 구독권 확인 가능
 
-## Final Thoughts
+### 3. QR 코드로 구독권 조회 기능
+- 오프라인 매장에서 QR 코드 스캔을 통해 구독권 인증 가능
+- 사장님이 손님의 구독권을 실시간으로 확인 가능하여 간편한 결제 처리 가능
 
-The final product is just the tip of the iceberg—the visible 1%. The other 99% may never see the spotlight, but they are just as important. They represent the trial and error, the persistence, and the creative drive that push us to find the best solution. So next time you’re stuck or looking for inspiration, don’t be afraid to dig into the drawer. The answer might be hiding there, waiting for the right moment to shine.
+## 담당 업무
+
+- **ERD 설계**: 기획 요구사항을 바탕으로 주도적으로 데이터베이스 설계 진행
+- **이메일 인증 기반 비밀번호 변경 기능 구현**
+- **백엔드 개발 기여도 90%**
+- **HateOAS 적용을 통한 API 사용성 향상**
+- **RestDocs를 활용한 API 문서화 및 테스트**
+
+## 성과 및 배운 점
+
+### 고급 연관 매핑 적용으로 중복 코드 개선
+- **JPA 상속 매핑 (`@Inheritance(strategy = InheritanceType.SINGLE_TABLE)`)을 활용하여 공통 엔티티 속성 통합**
+- **중복된 CRUD 로직을 공통 서비스 계층으로 분리하여 유지보수성 강화**
+
+### RESTful API 향상 (HateOAS 적용)
+- **HateOAS 적용 전**: 단순 JSON 응답 구조로 API 확장성이 부족함
+- **HateOAS 적용 후**:
+- 각 리소스에 대한 추가적인 링크 정보를 포함하여 API 사용성을 향상
+- 클라이언트가 API 문서를 참고하지 않아도 직관적으로 사용 가능
+
+### RestDocs를 활용한 API 문서화 및 테스트
+- **API 문서화 자동화**: RestDocs를 사용하여 실제 API 테스트를 기반으로 문서 자동 생성
+- **개발 생산성 향상**: API 변경 시 자동으로 문서 업데이트되어 유지보수 용이
+
+### **팀원 이탈 후 혼자서 끝까지 프로젝트를 완수한 경험**
+- 초기 백엔드 팀원이 3명이었지만, 중간에 취업 등의 이유로 팀원이 빠지면서 혼자 백엔드를 담당하게 됨
+- 디자이너와 프론트엔드 팀원들이 남아 있어 프로젝트를 포기할 수 없었고, 끝까지 책임감을 갖고 개발을 완료함
+- 어려운 상황에서도 책임감으로 프로젝트를 완수하고 배포한 경험을 통해 성장함
