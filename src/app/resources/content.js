@@ -31,21 +31,6 @@ const social = [
         icon: "github",
         link: "https://github.com/rnjstmdals6",
     },
-    {
-        name: "LinkedIn",
-        icon: "linkedin",
-        link: "https://www.linkedin.com/company/once-ui/",
-    },
-    {
-        name: "X",
-        icon: "x",
-        link: "",
-    },
-    {
-        name: "Email",
-        icon: "email",
-        link: "mailto:example@gmail.com",
-    },
 ];
 
 const home = {
